@@ -1,7 +1,6 @@
 import socket
 import threading
 import random
-import sys
 from datetime import datetime
 import sqlite3
 
@@ -20,7 +19,7 @@ max_size = 65535
 mesgs = []
 def listen(soc: socket.socket):
     while True:
-        msg = soc.recv(max_size)
+        msg, addr = soc.recvfrom(max_size)
         print('\r\r' + f'\033[{random.randint(31, 37)}m'+ msg.decode('utf-8') + '\n' + f'\033[{col_con1}m{name}: ', end='')
         mesgs.append(msg.decode('utf-8'))
         
@@ -63,7 +62,8 @@ def connect1(host: str = host, port: int = port):
                     conn.commit()
                     print('')
         elif msg == '@close':
-            soc.shutdown(1)
+            soc.shutdown()
+            soc.close()
 
                    
 
@@ -79,7 +79,7 @@ def connect1(host: str = host, port: int = port):
             
 def listen2(soc: socket.socket):
     while True:
-        msg = soc.recv(max_size)
+        msg, addr = soc.recvfrom(max_size)
         print('\r\r' + f'\033[{random.randint(31, 37)}m'+ msg.decode('utf-8')  + '\n' + f'\033[{col_con2}m{name}: ',end='')
         mesgs.append(msg.decode('utf-8'))
             
@@ -125,8 +125,8 @@ def connect2(host: str = host, port: int = port):
                     print('')
                 
         elif msg == '@close':
-            soc.shutdown(1)
-            
+            soc.shutdown()
+            soc.close()
             
           
             
