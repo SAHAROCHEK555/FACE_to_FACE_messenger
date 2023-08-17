@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FACE TO FASE</title>
+    <script src='eel.js'></script>
+    <link rel="icon" type = 'image/png' href="/face to face.png">
+    <link rel="stylesheet" href="css/style_sign_in.css">
+</head>
+<body>
+    <div align="center", class="content">
+        <img src="face to face.png" alt="icon", class="logo">
+        <h3>Регистрация</h3>
+        <input type="text" id = "password2" placeholder="Введите пароль"><br>
+        <button id="login">Войти</button>
+
+    
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        async function login(){
+            let password2 = document.getElementById('password2').value;
+            let result2 = await eel.login(password2)();
+        
+        }
+        
+        $('#login').click(function(){
+            window.close();
+            login();
+        }); 
+         
+    </script>
+</body>
+</html>

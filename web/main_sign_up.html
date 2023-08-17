@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FACE TO FASE</title>
+    <script src='eel.js'></script>
+    <link rel="icon" type = 'image/png' href="/face to face.png">
+    <link rel="stylesheet" href="css/style_sing_up.css">
+</head>
+<body>
+    <div align="center", class="content">
+        <img src="face to face.png" alt="icon", class="logo">
+        <h3>Регистрация</h3>
+        <input type="text" id = "password" placeholder="Придумайте пароль"><br>
+        <input type="text" id = "name" placeholder="Придумайте имя"><br>
+        <button id="sign_up">Зарегистрироваться</button>
+        <button id="sign_in2">Войти</button> 
+        <p id="result"></p>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+    async function sign_up(){
+        let password = document.getElementById('password').value;
+        let name_sg_up = document.getElementById('name').value;
+
+        let result = await eel.sign_up(password, name_sg_up)();
+        document.getElementById('result').innerHTML = result;
+
+    }
+    async function sign_in2(){
+        let result = await eel.sign_in2()();
+    }
+    
+
+    $('#sign_up').click(function(){
+        window.close();
+        sign_up();
+        
+    }); 
+
+    $('#sign_in2').click(function(){
+        window.close();
+        sign_in2();
+    }); 
+</script>
+</body>
+</html>

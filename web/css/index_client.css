@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap');
+
+*{
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+p#g1{
+    background-color: #8CABFF;
+    border-radius: 10px;
+    display: block;
+    padding: 10px;
+    word-wrap: break-word;
+    max-width: 200px;
+
+}
+
+p#g2{
+    background-color: #512B81;
+    border-radius: 10px;
+    display: block;
+    padding: 10px;
+    word-wrap: break-word;
+    max-width: 200px;
+}
+
+body{
+    background-color: #191825;
+    color: white;
+    width: 200;
+    height: 200;
+    
+}
+
+
+textarea{
+    border: none;
+    width: 290px;
+    height: 80px;
+    border-radius: 10px;
+    background-color:#865DFF;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 100px;
+    
+}
+
+button{
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    background-color: #E384FF;
+    color: white;
+    margin-top: 10px;
+    border-radius: 100px;
+    margin-left: 15%;
+    margin-right: 15%;
+
+
+}
+
+
+

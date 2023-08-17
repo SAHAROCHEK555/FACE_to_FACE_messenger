@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FACE to FASE chat</title>
+    <script src='eel.js'></script>
+    <link rel="icon" type='image/png' href="/face to face.png">
+    <link rel="stylesheet" href="css/index_client.css">
+</head>
+<body>
+    <div align="center", class="content"></div>
+    <ul id="result"></ul>
+    <ul id="result2"></ul>
+    <textarea type="text" id="msg"></textarea>
+    <button id="send_msg">отправить</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        let lastResult = ''; 
+        async function send_msg() {
+            let msg1 = document.getElementById('msg').value;
+            let result = await eel.send_msg(msg1)();
+            document.getElementById('result').insertAdjacentHTML("beforeEnd", prepare(result));
+            document.getElementById('msg').value = '';
+        }
+        function checkForUpdates() {
+            eel.print_msg()(function(result1) {
+                if (result1 && result1 !== lastResult) { 
+                    lastResult = result1; 
+                    document.getElementById('result').insertAdjacentHTML("beforeEnd", prep(result1));
+                }
+            });
+        }
+        setInterval(checkForUpdates, 1000);
+        function prepare(text) {
+            return "<p id='g1'>" + text + "</p>";
+        }
+        function prep(text) {
+            return "<p id='g2'>" + text + "</p>";
+        }
+    
+        $("#send_msg").on("click", send_msg);
+    </script>
+</body>
+</html>
