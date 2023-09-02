@@ -5,10 +5,9 @@
 }
 
 body{
-    height: 400px;
-    width: 300px;
     background-color: #191825;
     color: white;
+
 }
 
 .logo{
@@ -22,23 +21,29 @@ body{
     margin-top: 100px;
 }
 input, textarea{
-    border: none;
-    width: 90%;
+    border-width: 1px;
+    border-color: white;
+    width: 300px;
     height: 40px;
-    border-radius: 100px;
-    padding-left: 10px;
-    background-color:#865DFF;
+    border-radius: 5px;
+    background-color:#191825;
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size:larger;
 }
+
 
 button{
     border: none;
     cursor: pointer;
-    width: 70%;
-    height: 35px;
-    background-color: 	#E384FF;
+    width: 300px;
+    height: 40px;
+    background-color: 	#865DFF;
     color: white;
-    margin-top: 10px;
-    border-radius: 100px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size:larger;
 }
+::placeholder{
+    color: white;
+}    

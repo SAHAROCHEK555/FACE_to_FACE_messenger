@@ -3,10 +3,11 @@
 *{
     font-family: 'Ysabeau SC', sans-serif;
 }
-
+div{
+    display: block;
+    align-content: center;
+}
 body{
-    height: 400px;
-    width: 300px;
     background-color: #191825;
     color: white;
 }
@@ -15,28 +16,48 @@ body{
     width: 200px;
     height: 200px;
 }
-
+::placeholder{
+    color: white;
+}
 .content{
-    margin-top: 100px;
+    margin-top: 50px;
 }
 input, textarea{
-    border: none;
-    width: 90%;
+    border-width: 1px;
+    border-color: white;
+    width: 300px;
     height: 40px;
-    border-radius: 100px;
-    padding-left: 10px;
-    background-color:#865DFF;
+    border-radius: 5px;
+    background-color:#191825;
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size:larger;
 }
 
-button{
+#login{
     border: none;
     cursor: pointer;
-    width: 70%;
-    height: 35px;
-    background-color: 	#E384FF;
+    width: 300px;
+    height: 40px;
+    background-color: 	#865DFF;
     color: white;
-    margin-top: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size:larger;
+}
+
+#sign_up{
+    border: none;
+    cursor: pointer;
+    width: 300px;
+    height: 40px;
+    background-color: 	#191825;
+    color: #865DFF;
+    margin-top: 30px;
+    margin-top: 20px;
     border-radius: 100px;
+    font-size:larger;
+}
+h2{
+    margin-bottom: 40px;
 }

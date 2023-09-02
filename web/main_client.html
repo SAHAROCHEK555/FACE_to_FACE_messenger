@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FACE to FASE chat</title>
     <script src='eel.js'></script>
     <link rel="icon" type='image/png' href="/face to face.png">
     <link rel="stylesheet" href="css/index_client.css">
 </head>
 <body>
-    <div align="center", class="content"></div>
-    <ul id="result"></ul>
-    <ul id="result2"></ul>
-    <textarea type="text" id="msg"></textarea>
-    <button id="send_msg">отправить</button>
+    <div align="center", class="content">
+        <div class="print">
+        <ul id="result"></ul>
+        <ul id="result2"></ul>          
+        </div>
+        <div class="enter">  
+        <textarea type="text" id="msg"></textarea>
+        <button id="send_msg">отправить</button><br>
+        </div>
+
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript">
         let lastResult = ''; 
@@ -35,7 +41,7 @@
             return "<p id='g1'>" + text + "</p>";
         }
         function prep(text) {
-            return "<p id='g2'>" + text + "</p>";
+            return "<p id='g2'>" + text + "</p>" ;
         }
     
         $("#send_msg").on("click", send_msg);
