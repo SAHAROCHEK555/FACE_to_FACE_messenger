@@ -60,19 +60,13 @@ class Connect_to_html:
         def sign_up2(password, name_sg_up):
             soc.send(f'SIGNUP_TAG: {password} {name_sg_up}'.encode('utf-8'))
             sending_messages_class_copy.nickname_func()
-            eel.show('main_client.html')
             soc.send("STORY_TAG".encode('utf-8'))
         @eel.expose
         def login(password2):
             soc.send(f'SIGNIN_TAG: {password2}'.encode('utf-8'))   
             sending_messages_class_copy.nickname_func()
             soc.send("STORY_TAG".encode("utf-8"))
-            eel.show('main_client.html')
             
-                
-        @eel.expose
-        def sign_up():
-            eel.show("main_sign_up.html")
         eel.start("main_sign_in.html", size=(420, 800), port=0000)
 
 if __name__ == "__main__":

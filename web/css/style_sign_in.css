@@ -14,7 +14,7 @@ body{
 
 .logo{
     width: 200px;
-    height: 200px;
+    height: 220px;
 }
 ::placeholder{
     color: white;
@@ -35,29 +35,26 @@ input, textarea{
 }
 
 #login{
+    text-decoration: none;
     border: none;
     cursor: pointer;
-    width: 300px;
-    height: 40px;
     background-color: 	#865DFF;
     color: white;
-    margin-top: 20px;
     border-radius: 5px;
     font-size:larger;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
 #sign_up{
     border: none;
     cursor: pointer;
-    width: 300px;
-    height: 40px;
     background-color: 	#191825;
     color: #865DFF;
-    margin-top: 30px;
     margin-top: 20px;
-    border-radius: 100px;
     font-size:larger;
 }
+
 h2{
     margin-bottom: 40px;
 }

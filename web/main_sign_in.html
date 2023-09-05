@@ -12,8 +12,8 @@
         <img src="face to face.png" alt="icon", class="logo">
         <h2>Войти</h2>
         <input type="text" id = "password2" placeholder="Введите пароль"><br>
-        <button id="login">Войти</button><br>
-        <button id="sign_up">Зарегистрироваться</button><br>
+        <a id="login", href="main_client.html">Войти</a><br>
+        <a id="sign_up", href="main_sign_up.html">Зарегистрироваться</a>
     
     </div>
 
@@ -27,12 +27,8 @@
         async function sign_up(){
             let result = await eel.sign_up()();
         }
-        $('#sign_up').click(function(){
-            window.close();
-            sign_up();
-        });
+
         $('#login').click(function(){
-            window.close();
             login();
         }); 
          
