@@ -3,6 +3,7 @@ import threading
 from datetime import datetime
 import eel
 
+
 messages = []
 
 host = '192.168.0.31'
@@ -21,8 +22,6 @@ class Listen_class:
                 print(msg.decode("utf-8"))
                 name = msg.decode('utf-8')[msg.decode('utf-8').index(':')+1:]      
                 sending_messages_class_copy.get_name(name) 
-            if msg.decode("utf-8").startswith("STORU_TAG"):
-                pass    
             else:
                 msg2 = msg.decode("utf-8")
                 print(msg2)    
@@ -39,9 +38,8 @@ threading.Thread(target = listen_class_copy.listen, daemon=True).start()
 soc.send(f'OPEN_TAG:'.encode('utf-8'))
 
 class Sending_messages:
-    def get_name(self, nickname_g):
-        self.nickname = nickname_g
-    
+    def get_name(self, nickname_for_listen):
+        self.nickname = nickname_for_listen    
     def nickname_func(self):    
         @eel.expose()
         def send_msg(msg1):
