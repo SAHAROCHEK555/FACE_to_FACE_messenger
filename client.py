@@ -6,7 +6,7 @@ import eel
 
 messages = []
 
-host = '192.168.0.31'
+host = 'localhost'
 port = 8000
 
 soc = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
